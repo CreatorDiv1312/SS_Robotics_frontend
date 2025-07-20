@@ -13,7 +13,7 @@ import {
   faCheckCircle
 } from '@fortawesome/free-solid-svg-icons';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://4b0926e9-9bf9-4356-8fda-d07538876873-00-3d2g23pbmlfua.sisko.replit.dev/');
 
 const statusIcons = {
   Placed: faBoxOpen,
