@@ -1,0 +1,138 @@
+.cart-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.cart-page.dark {
+  --bg: #0B0F1A;
+  --text: #fff;
+  --card: #141a2a;
+  --border: #2a2f3a;
+}
+
+.cart-page.light {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card: #ffffff;
+  --border: #ddd;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.cart-table thead {
+  background-color: var(--card);
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-table input[type="number"] {
+  padding: 0.4rem;
+  width: 60px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.cart-remove-btn {
+  background: transparent;
+  color: crimson;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cart-remove-btn:hover {
+  color: red;
+}
+
+.cart-total {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.checkout-btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 6px 12px rgba(0, 170, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #008fd1;
+}
+
+@media (max-width: 768px) {
+  .cart-table thead {
+    display: none;
+  }
+
+  .cart-table tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    padding: 1rem;
+  }
+
+  .cart-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border: none;
+  }
+
+  .cart-total, .checkout-btn {
+    float: none;
+    text-align: center;
+  }
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.discounted-price {
+  font-weight: bold;
+  color: green;
+}
+
+.discount-label {
+  font-size: 0.8rem;
+  color: #ff4d4d;
+}
+

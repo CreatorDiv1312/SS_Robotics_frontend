@@ -1,0 +1,150 @@
+/* src/style/Header.css */
+
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.header.light {
+  background-color: #ffffff;
+  color: #222;
+}
+
+.header.dark {
+  background-color: #0B0F1A;
+  color: #00A9FF;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* ✅ Added spacing between logo and hamburger */
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  width: 60%;
+  float: right;
+  margin: -75px -350px;
+}
+
+.nav-links a,
+.logout-btn,
+.theme-toggle-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.logout-btn,
+.theme-toggle-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+/* .hamburger {
+    display: block;
+    margin-left: 62%;
+    margin-top: -24%;
+  } */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: 86%;
+    margin-top: -35%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+    margin: 15px 0px;
+  }
+
+  .nav-links a,
+  .logout-btn,
+  .theme-toggle-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+  .logo{
+    width: 80px;
+  }
+}
+
+
+/* Header css continued with minor modifications */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}

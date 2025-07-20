@@ -1,0 +1,139 @@
+
+
+.tracking-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #f9f9f9, #eef1f6);
+  min-height: 100vh;
+}
+
+.tracking-card {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.order-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.order-id {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  left: 1.4rem;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #ccc;
+  z-index: 0;
+}
+
+.timeline-step:last-child::before {
+  height: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 0;
+  background: #ccc;
+  color: white;
+  border-radius: 50%;
+  height: 2.4rem;
+  width: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.timeline-step.active .timeline-icon {
+  background: #2ecc71;
+}
+
+.timeline-content {
+  margin-left: 1rem;
+}
+
+.timeline-stage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.timeline-time {
+  display: block;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 0.3rem;
+}
+
+.order-error,
+.order-loading {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tracking-card {
+    padding: 1.5rem;
+  }
+
+  .timeline-step {
+    padding-left: 2.5rem;
+  }
+
+  .timeline-icon {
+    height: 2rem;
+    width: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .order-title {
+    font-size: 1.4rem;
+  }
+}

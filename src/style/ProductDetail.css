@@ -1,0 +1,158 @@
+.product-detail-page {
+  padding: 2rem;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.product-detail-page.light {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.product-detail-page.dark {
+  background-color: #0B0F1A;
+  color: #fff;
+}
+
+.product-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+  transform: scale(1.03);
+}
+
+.product-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #00aaff;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.product-stock {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.in-stock {
+  color: #38b000;
+}
+
+.out-of-stock {
+  color: #d00000;
+}
+
+.product-qty {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.product-qty input {
+  margin-left: 0.5rem;
+  width: 70px;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.product-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.buy-now-btn {
+  background-color: #00b894;
+  color: white;
+}
+
+.buy-now-btn:hover {
+  background-color: #009975;
+}
+
+.product-loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.4rem;
+  color: gray;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-buttons {
+    justify-content: center;
+  }
+}
+
+
+/* Product Detail.css  */
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 5px;
+}
+
+.discounted-price {
+  color: green;
+  font-weight: bold;
+}
+
+.discount-tag {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
